@@ -1,0 +1,53 @@
+/* @import url(reset.css);*/
+* {
+    color: green;
+}
+
+mark {
+    color: red;
+}
+
+.container {
+    color: blue;
+}
+
+#culture-p {
+    color: blueviolet;
+}
+
+[class*="test"] {
+    color: pink;
+}
+
+p.block_p {
+    color: black;
+}
+
+.gold,
+.g {
+    color: gold;
+}
+
+.block h2 {
+    color: fuchsia;
+}
+
+.block .orang {
+    color: orangered;
+}
+
+ul * {
+    color: brown;
+}
+
+footer>h2 {
+    color: rebeccapurple;
+}
+
+.uk~p {
+    color: purple;
+}
+
+img {
+    max-width: 20%;
+}
