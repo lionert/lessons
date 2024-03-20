@@ -1,0 +1,91 @@
+
+/* Підключаємо  локальні шрифти*/
+@import url(fonts.css);
+
+/* Підключаємо  css  файл скидання стилів*/
+@import url(reset.css);
+
+body{
+    background-color: #F8F8F8;
+    color: #2b2929;
+    font-family:  "Proxima Nova", sans-serif;
+    text-align: justify;
+}
+.container-header,
+.container{
+    margin: 3% auto;
+    max-width: 70%;
+}
+.header-item{
+    display: inline-block;
+    width: 15%;
+    margin-left: 1%;
+}
+.header-item > img{
+    width: 100%;
+}
+.header-title,
+.container > h1{
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    padding-bottom: 3%;
+    line-height: 48px;
+    
+}
+.container > img{
+    width: 100%;
+    margin-bottom: 3%;
+}
+.container > p {
+    line-height: 28px;
+    font-weight: 600;
+    margin-bottom: 1%;
+}
+.container > ul,li{
+    line-height: 30px;
+    margin-bottom: 2%;
+}
+.footer-title{
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 2%;
+}
+.section {
+	max-width: 70%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.items {
+	margin-left: -5px;
+	margin-right: -5px;
+	font-size: 0;
+}
+.item {
+	width: 25%;
+	display: inline-block;
+	margin-bottom: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	vertical-align: top;
+}
+.content {
+	text-align: center;
+}
+.content > img{
+    width: 50%;
+    margin-bottom: 5%;
+}
+.content-title{
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 34px;
+    margin-bottom: 5%;
+}
+.content-title ~ p {
+    font-size: 16px;
+    line-height: 30px;
+}
