@@ -1,0 +1,143 @@
+
+/* Підключаємо  локальні шрифти*/
+@import url(fonts.css);
+
+/* Підключаємо  css  файл скидання стилів*/
+@import url(reset.css);
+
+body{
+    background-color: #F8F8F8;
+    color: #2b2929;
+    font-family:"Proxima Nova", sans-serif;
+    text-align: justify;
+}
+.page-main{
+    margin-bottom: 2%;
+}
+.container{
+    margin: 3% auto;
+    max-width: 70%;
+}
+.container > h1{
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 3%;
+    line-height: 48px;
+    
+}
+.container > img{
+    width: 100%;
+    margin-bottom: 3%;
+}
+.container > p {
+    line-height: 28px;
+    font-weight: 600;
+    margin-bottom: 1%;
+}
+.list,
+.list__item{
+    line-height: 30px;
+    margin-bottom: 2%;
+}
+.list__item{
+    background: url("../img/logo.png") 0 0 / 30px no-repeat;
+    padding-left: 4%;
+}
+.section-page{
+    font-family:"Roboto", sans-serif;
+    height: 847px;
+    background-color:#1e2832;
+    background:
+    url("../img/Frame1.png") 0% 70% / 132px no-repeat,
+    url("../img/Frame.png") 100% 50% / 195px no-repeat,
+    url("../img/image-product.png") 85% 25% / 442px no-repeat;
+    margin-bottom: 2%;
+}
+.section-container_text{
+    padding: 150px 0 0 150px;
+    min-height: 50%;
+}
+#section-title{
+    font-size: 74px;
+    font-weight: 300;
+    line-height: 55px;
+    color: #000;
+    padding-bottom: 3%;
+}
+#section-subtitle{
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 55px;
+    color: #000;
+    padding-bottom: 3%;
+}
+.section-link{
+    background-color:  #1e2832;
+    width: 10%;
+    font-weight: 700;
+    height: 45px;
+    padding:15px 0px 0 20px;
+
+}
+.section-link > p{
+    text-transform: capitalize;
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+}
+.section-link > img{
+    width: 15px;
+}
+footer{
+    padding-bottom: 1%;
+}
+.footer-page{
+    border: 2px solid black;
+    height: 530px;
+    background:
+    url("../img/f.png") 77% 48% / 20px no-repeat,
+    url("../img/B.png") 75% 10% / 25px no-repeat,
+    url("../img/M.png") 47% 97% / 25px no-repeat,
+    url("../img/p.png") 50% 35% / 25px no-repeat,
+    url("../img/X.png") 45% 2% / 45px no-repeat,
+    url("../img/8.png") 25% -2% / 20px no-repeat,
+    url("../img/0.png") 40% 35% / 20px no-repeat,
+    url("../img/0.png") 30% 105% / 40px no-repeat,
+     rgb(145, 77, 255) url("../img/Kid-On-Books-Illustration.png") 80% 80% / auto no-repeat;
+}
+.footer-container_text{
+    font-family: "Quicksand",sans-serif;   
+    padding: 5.6% 0 0 5%;
+    min-height: 50%;
+    color: #fff;
+}
+#footer-title{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    padding-bottom: 1%;
+}
+#footer-subtitle{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    padding-bottom: 1%;
+}
+.footer-link{
+    background-color: #fff;
+    width: 15%;
+    border-radius: 8px;
+    color: #0d1216;
+    font-weight: 700;
+    height: 50px;
+    padding:15px 0px 0 20px;
+
+}
+.footer-link > p{
+    display: inline-block;
+}
+.footer-link > img{
+    width: 15px;
+}
