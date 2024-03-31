@@ -1,0 +1,450 @@
+
+/* Підключаємо  локальні шрифти*/
+@import url(fonts.css);
+
+/* Підключаємо  css  файл скидання стилів*/
+@import url(reset.css);
+header{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+header *{
+    margin-bottom: 20px;
+}
+.header-page{
+    padding: 40px;
+}
+/*1. Відпрацювання псевдокласів :hover та :active;*/
+.link{
+    background-color: #ff3ddb;
+	padding: 12px;
+	line-height: 1.56;
+	border-radius: 8px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.link span{
+    display: inline-block;
+    background: url("../img/favourite\ \(1\).png") 0 0 no-repeat;
+	padding-left: 34px;
+    margin-bottom: 0%;
+}
+.link:hover{
+    background-color: #ff3d43;
+    box-shadow: 7px 7px 7px rgba(255,61,219,1);
+}
+.link span:hover{
+    text-transform: uppercase;
+}
+.link:active{
+    background-color: #c8b9c5;
+}
+/*2. Відпрацювання псевдокласів :visited;*/
+.link-visited{
+    background-color: #4d3dff;
+	padding: 12px;
+	line-height: 1.56;
+	border-radius: 8px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.link-visited span{
+    display: inline-block;
+    background: url("../img/favourite\ \(1\).png") 0 0 no-repeat;
+	padding-left: 34px;
+    margin-bottom: 0%;
+}
+.link-visited{
+    background-color: #ffec3d;
+}
+/* 3. Відпрацювання псевдокласів :focus, :focus-visible Звернення до 
+          елементу у стані "фокусу"*/
+          .link-focus{
+            background-color: #3dfffc;
+            padding: 12px;
+            line-height: 1.56;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .link-focus span{
+            display: inline-block;
+            background: url("../img/favourite\ \(1\).png") 0 0 no-repeat;
+            padding-left: 34px;
+            margin-bottom: 0%;
+        }
+        .link-focus:focus{
+            outline: 5px dashed red;
+        }
+        .link-focus:focus-visible{
+            outline: 2px dashed red;
+        }
+/*4.Приклад появи елементів при наведені курсору на батьківський елемент*/
+.header-img{
+    width: 100%;
+}
+.link-header{
+    background: url("../img/minpin.png") 5% 48% / 30px no-repeat,
+    #3d54ff ;
+	padding: 12px;
+	line-height: 1.56;
+	border-radius: 8px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.link-header span{
+    display: inline-block;
+	padding-left: 34px;
+    margin-bottom: 0%;
+}
+.header-img > img{
+    visibility: hidden;
+}
+.header-img:hover > img{
+    visibility: visible;
+}
+/*5.Псевдоклас стану :target*/
+#link-target{
+    background-color: #4dff3d;
+	padding: 12px;
+	line-height: 1.56;
+	border-radius: 8px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#link-target span{
+    display: inline-block;
+    background: url("../img/favourite\ \(1\).png") 0 0 no-repeat;
+	padding-left: 34px;
+    margin-bottom: 0%;
+}
+#target-text{
+    border: 1px solid green;
+    text-decoration: underline;
+    display: none;
+}
+#target-text:target{
+    display: block;
+}
+/* Псевдокласи положення у коді */
+.header-text h2:first-child{
+    font-size: 40px;
+    text-decoration: underline;
+    color: #4dff3d;
+    text-align: center;
+}
+.heder-text_list *:first-child{
+    text-transform: uppercase;
+}
+.header-text img:first-of-type{
+    width: 50%;
+    display: block;
+    margin: 20px auto;
+}
+.header-text *:last-child{
+    color: red;
+}
+.header-text img:last-of-type{
+    width: 50%;
+    display: block;
+    margin: 20px auto;
+}
+.header-text li:nth-child(3){
+    border: 3px solid green;
+    background-color: #4dff3d;
+    
+}
+.header-text *:nth-child(odd){
+    font-size: 30px;
+    color: purple;
+}
+.header-text *:nth-child(even){
+    color: greenyellow;
+    text-transform: lowercase;
+}
+.heder-text_list:nth-child(2n +2){
+    box-shadow:5px 5px 5px #3d54ff;
+}
+.header-text p:last-child{
+    margin-bottom: 0px;
+}
+.heder-text_list li:not(:last-child){
+    background-color: #ff3ddb;
+}
+/*.header-text:has(.has){
+    background-color: black;
+}*/
+
+/*псевдоелементи ::before{} ::after{}*/
+.ul{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #ff3ddb;
+}
+.list-items:not(:last-child) {
+	margin-bottom: 5px;
+}
+.list-items::before {
+	content: "";
+	vertical-align: middle;
+	background: url("../img/minpin.png") 0 0 / 100% no-repeat;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
+.list-items:hover::before {
+    transform: rotate(-180deg);
+    transform: all 0.3s;
+}
+
+.container{
+    font-family: "Exo",sans-serif;
+    background: url("../img/About\ section.png");
+}
+.container-text > * {
+	margin-bottom: 15px;
+}
+.container-text{
+    margin: 0 auto;
+    padding: 120px 260px 85px 260px;
+    color: #fff;  
+}
+.container-text h1:first-of-type{
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.container-text h1:first-of-type::after{
+    content:"";
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 20px;
+	height: 1px;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(66, 255, 0, 1) 51%, rgba(36, 0, 255, 1) 100%);
+    display: block;
+}
+.container-text > p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+    letter-spacing: -1px;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+}
+.container-text> *:last-child {
+	margin-bottom: 0px;
+}
+.container-nav{
+    margin-bottom: 50px;
+    width: 1150px;
+}
+.nav-link{
+    margin-right: 30px;
+    font-family: "Orbitron",sans-serif;
+    font-weight: 500;
+    line-height: 25px;
+    text-transform: capitalize;
+    font-size: 20px;
+    text-align: center;
+}
+.nav-link:hover{
+    background:  linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(66, 255, 0, 1) 51%, rgba(36, 0, 255, 1) 100%);
+   
+}
+.nav-link::after{
+    content: "";
+    width: 7px;
+    height: 7px;
+    margin-left: 50px;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(66, 255, 0, 1) 51%, rgba(36, 0, 255, 1) 100%);
+    border-radius: 50%;
+}
+.container-contacts{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+#container-contacts_location{
+    text-transform: capitalize;
+    margin-left: 40px;
+}
+#container-contacts_location:hover{
+    box-shadow: 0 0 20px 20px#3d54ff;
+    background-color: #1b30cc;
+}
+#container-contacts_call{
+    margin-left: 40px;
+}
+#container-contacts_call:hover{
+    box-shadow: 0 0 20px 20px#3d54ff;
+    background-color: #1b30cc;
+}
+#container-contacts_emeil{
+    margin-left: 40px;
+}
+#container-contacts_emeil:hover{
+    box-shadow: 0 0 20px 20px#3d54ff;
+    background-color: #1b30cc;
+}
+#container-contacts_location::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url("../img/Location.png") 0 50% / 100% no-repeat;
+    margin-right: 20px;  
+}
+#container-contacts_call::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url("../img/Call.png") 0 50% / 100% no-repeat;
+    margin-right: 20px;  
+}
+#container-contacts_emeil::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url("../img/Email.png") 0 50% / 100% no-repeat;
+    margin-right: 20px;  
+}
+/*Game :hover*/
+.game-h{
+    margin-top: 20px;
+    color: red;
+    font-size: 30px;
+    text-align: center;
+}
+.container-game{
+    background-color: pink;
+    width: 900px;
+    margin: 50px auto;
+    min-height: 650px;
+    font-size: 0px;
+}
+.game-area{
+    background-color: #3d54ff;
+}
+.game-area-1 {
+	width: 50px;
+	height: 50px;
+}
+.game-area-2{
+	/* display: block; */
+	width: 50px;
+	height: 50px;
+}
+.game-area-1:hover + .game-area-2,
+.game-area-2:hover:hover {
+	width: 100%;
+}
+.game-area-3{
+    width: 850px;
+    height: 50px;
+    display: inline-block;
+}
+.game-area-4{
+    width: 50px;
+    height: 50px;
+    visibility: hidden;
+}
+.game-area-2:hover ~ .game-area-4,
+.game-area-4:hover{
+    display: inline-block;
+    visibility: visible;
+}
+.game-area-4:hover{
+    height: 100px;
+}
+
+.game-area-5{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+.game-area-6{
+    width: 500px;
+    height: 50px;
+    visibility: hidden;
+    margin-left: 350px;
+}
+.game-area-4:hover ~ .game-area-6,
+.game-area-6:hover{
+    display: inline-block;
+    visibility: visible;
+}
+.game-area-6:hover{
+    height: 50px;
+}
+
+.game-area-6:hover ~ .game-area-7,
+.game-area-7:hover{
+    display: inline-block;
+    visibility: visible;
+}
+.game-area-7{
+    background: url("../img/завантаження.jpg") 0 0 / 100% no-repeat ;
+    width: 400px;
+    height: 300px;
+    visibility: hidden;
+}
+/*footer*/
+.page-footer{
+    margin-bottom: 2%;
+    font-family: "Proxima Nova", sans-serif;
+    font-weight: 400;
+}
+.container-footer{
+    margin: 3% auto;
+    max-width: 70%;
+}
+.container-footer > h1{
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 3%;
+    line-height: 48px;
+    
+}
+.container-footer > img{
+    width: 100%;
+    margin-bottom: 3%;
+}
+.container-footer > p {
+    line-height: 30px;
+    margin-bottom: 1%;
+    color: #2b2929;
+}
+.list,
+.list__item{
+    line-height: 30px;
+    margin-bottom: 2%;
+}
+.list__item{
+    padding-left: 4%;
+}
+.list__item::before{
+    content: "";
+    width: 32px;
+    height: 32px;
+    background: url("../img/mark.png") 0 50% / 100% no-repeat;
+    margin-left: -40px; 
+    padding-top: 20px;
+}
+
+
+
+
+
+
