@@ -1,0 +1,47 @@
+
+/* Підключаємо  локальні шрифти*/
+@import url(fonts.css);
+
+/* Підключаємо  css  файл скидання стилів*/
+@import url(reset.css);
+
+body{
+    background-color:  #f8f8f8;
+    font-family:"Roboto",sans-serif;
+    font-weight: 500;
+}
+.container-main{
+    width: 80%;
+    margin: 0 auto;
+    min-height: 650px;
+    padding: 20px;
+}
+.img-block:not(:last-child) {
+	margin-bottom: 35px;
+}
+.img-block{
+    padding: 10px;
+    box-sizing: border-box;
+}
+.img-block:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-weight: 600;
+    color: #8c2d66;
+}
+
+.img-block img{
+    vertical-align: middle;
+    max-width: 400px;
+}
+.img-logo{
+    margin-left: -160px;
+}
+.img-block span{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+
+
