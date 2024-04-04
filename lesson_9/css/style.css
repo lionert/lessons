@@ -1,0 +1,13 @@
+
+/* Підключаємо  локальні шрифти*/
+@import url(fonts.css);
+
+/* Підключаємо  css  файл скидання стилів*/
+@import url(reset.css);
+
+.page__container{
+    width: 80%;
+    margin: 0 auto;
+    min-height: 650px;
+    background-color: pink;
+}
