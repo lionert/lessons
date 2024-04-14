@@ -1,0 +1,347 @@
+
+/* Підключаємо  локальні шрифти*/
+@import url(fonts.css);
+
+/* Підключаємо  css  файл скидання стилів*/
+@import url(reset.css);
+
+.wrapper{
+    overflow: clip;
+    min-height: 100%;
+}
+.header{
+    font-family: "Proxima Nova", sans-serif;;
+}
+.header__menu {
+  padding:27px 0px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #fff;
+
+}
+/* загальні стилі для меню */
+.menu {
+  text-align: center;
+  font-weight: 400;
+}
+
+/* прибираємо фантомний відступ та задаємо відступ */
+.menu__list {
+  font-size: 0;
+  display: inline-block;
+  margin-left: 10%;
+  width: 100%;
+  text-align: left;
+}
+
+/* виставляємо пункти меню в рядок */
+.menu__item {
+  position: relative;
+  display: inline-block;
+  font-size: 22px;
+  text-transform: unset;
+}
+
+/* задаєм відступ пунктам окрім останнього */
+.menu__item:not(:last-child) {
+  margin-right: 35px;
+}
+.menu__img-link{
+   text-align: left;
+}
+/* прописуємо стилі для посилання */
+.menu__link {
+    background-color: #ffbc57;
+    vertical-align: top;
+    border-radius: 8px 8px 8px 8px;
+    padding: 11px 20px;
+    color: #fff;
+    font-size: 19px;
+    line-height: 24px;
+    min-width: 145px; 
+}
+/*Додаємо до посилання svg*/
+.menu__link::before{
+    background: url(../img/menu-1.svg);
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+/* Змінюємо картинку svg при наведині на елемент*/
+.menu__item:hover .menu__link::before{
+    background: url(../img/close-catalog.svg);
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* додаємо позиціонування для елементу "згадуємо правила методології BEM, що для блоку не задають відступи та позиціонування, це робиться для елементу чи модифікатору" */
+.menu__menu-sub{
+  border-radius: 8px 8px 8px 8px;
+  position: relative;
+  position: absolute;
+  top: 150%;
+  right: 80%;
+  z-index: 50;
+}
+
+/* стилі для блоку .sub-menu */
+.sub-menu {
+  min-width: 311px;
+  vertical-align: middle;
+  color: #2b2929;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: capitalize;
+/*  приховуємо меню ⬇️  */
+  visibility: hidden;
+  opacity: 0;
+}
+
+.menu__menu-sub .sub-menu__item:first-child{
+  padding: 8px 0px 0px 0px;
+}
+.menu__menu-sub .sub-menu__item:last-child{
+  padding: 0px 0px 8px 0px;
+}
+
+/* додаємо псевдоелемент "підкладку" для того щоб при переміщенні курсору не на підменю воно не зникало, щоб зрозуміти про що я пишу закоментуйте content: ""; ⬇️ */
+.sub-menu::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 1%;
+  width: 135%;
+  height: 25px;
+
+}
+.sub-menu__item{
+  min-width: 311px;
+  min-width: 311px;
+}
+.sub-menu__item:hover .sub-menu__link{
+  background-color: #ffbc57;
+}
+.sub-menu__link--border-radius{
+  border-radius: 8px 8px 0px 0px;
+}
+.sub-menu__link a:last-child{
+  border-radius: 0px 0px 8px 8px;
+}
+.sub-menu__link{
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px 15px 10px 30px;
+    width: 100%;
+}
+.sub-menu__span{
+  padding-left: 15px;
+  vertical-align: middle;
+  color: #2b2929;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.sub-menu__img{
+
+}
+/* Додаємо стрілку до посилання у підменю*/
+.sub-menu__link::after{
+    content: "";
+    background: url(../img/arrow.svg);
+    content: "";
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    right: 5px;
+}
+.sub-menu__item:hover .sub-menu__link::after{ 
+  background: url(../img/arrow-black.svg);
+  z-index: 2;
+}
+
+/* стилі для стану hover при наведені на пункт меню змінюємо колір для посилання */
+.menu__item:hover .menu__link{
+  color: black;
+  
+}
+
+/* показуємо підменю при наведені на потрібний пункт меню */
+.menu__item:hover .sub-menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* задаєм відступ пунктам окрім останнього */
+.sub-menu__item:not(:last-child) {
+
+}
+
+/* стилі для стану hover */
+.sub-menu__link:hover {
+ 
+
+ }
+.sub-menu__dropdown{
+  padding: 20px;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+}
+
+.dropdown{
+  height: 100%;
+  min-width: 311px;
+  vertical-align: middle;
+  border-radius: 8px 8px 8px 8px;
+  color: #2b2929;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: capitalize;
+  background-color: #fff;
+/*  приховуємо меню ⬇️  */
+  visibility: hidden;
+  opacity: 0;
+}
+
+
+/* показуємо підменю при наведені на потрібний пункт меню */
+#block-1:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown__item{
+  color: #2b2929;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 40px;
+}
+.dropdown__item:not(:last-child) {
+	margin-bottom: 10px;
+}
+#block-2:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+#block-3:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+#block-4:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+#block-5:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+#block-6:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+/*page*/
+.page{
+  background-color: hsl(0deg 0% 97%);
+}
+.page-container{
+  width: 85%;
+  margin: 8% auto 2% auto;
+}
+.popular-categories{
+
+}
+.popular-categories__title{
+  margin-bottom: 20px;
+}
+.title{
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+}
+.popular-categories__boxes{
+  font-size: 0px;
+}
+.popular-categories__boxes:not(:last-child) {
+  margin-bottom: 40px;
+ }
+.popular-categories__box{
+  position: relative;
+  min-width: 250px;
+  border-radius: 8px 8px 8px 8px;
+  box-shadow: -3px 4px 15px 0 rgba(0,0,0,.06);
+  min-height: 300px;
+  overflow: hidden;
+  padding: 5px 5px;
+  margin: 5px 3px;
+}
+.box{
+  display: inline-block;
+}
+.box:hover{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.box__arrow{
+  position: absolute;
+  top: 80%;
+  right: 5%;
+}
+.box__number{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  color: #b1b1b1;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.box__title{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  color: #2b2929;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+.box__semicircle{
+  position: absolute;
+  top: 39%;
+  left: -12%;
+  min-width: 122%;
+  border-radius: 70%;
+  background-color: hsla(0, 0%, 94%, 14.815);
+  min-height: 100%;
+ 
+}
+.box__img{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+.footer__title{
+  margin-bottom: 20px;
+}
+.footer__p{
+  line-height: 1.875;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: justify;
+  text-indent: 20px;
+}
+.footer__text > *:not(:last-child) {
+  margin-bottom: 10px;
+}
