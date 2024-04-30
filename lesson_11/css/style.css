@@ -64,7 +64,7 @@ header{
   transform: translateY(25px);
   transition: all 0.3s;
 }
-#translateY-:hover{
+#translateX-:hover{
   transform: translateY(-20px);
   transition: all 0.3s;
 }
