@@ -32,6 +32,11 @@ body{
   justify-content: space-between;
   font-weight: 400;
 }
+.top-menu__item{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 .top-menu__list{
   display: flex;
   justify-content: space-between;
