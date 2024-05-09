@@ -31,6 +31,7 @@ body{
   display: flex;
   justify-content: space-between;
   font-weight: 400;
+  gap: 100px;
 }
 .top-menu__item{
   display: flex;
@@ -41,7 +42,9 @@ body{
   display: flex;
   justify-content: space-between;
   column-gap: 30px;
+  row-gap: 10px;
   align-items: center;
+  flex-wrap: wrap;
 }
 .top-menu__list li{
   transition: all 0.3s;
@@ -195,7 +198,8 @@ body{
 .bootom-menu__items{
   display: flex;
   justify-content: space-between;
- 
+  flex-wrap: wrap;
+  gap: 60px;
 }
 .bootom-menu__item{
   transition: all 0.1s;
@@ -207,6 +211,9 @@ body{
 .bootom-menu__list{
   display: flex;
   gap: 40px;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 10px;
 }
 .bootom-menu__link {
   font-size: 19px;
@@ -264,38 +271,45 @@ body{
 }
 .item-categories__content{
   background: url(../img/Ellipse\ 2.webp) bottom no-repeat, #fff;
-  position: relative;
   border-radius: 8px;
   flex-basis: 250px;
-  min-height: 300px;
+  height: 300px;
   flex-shrink: 0;
   box-shadow: 1px 1px 8px 3px #f2eded;
   overflow: clip;
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 .item-categories__content:hover,
 .card:hover {
   box-shadow: 1px 1px 8px 3px #c1bfbf;
   transform: scale(1.03);
 }
+.item-categories__top-content{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  flex-wrap: nowrap;
+  gap: 50px;
+}
 .item-categories__title {
   font-size: 20px;
   line-height: 1.4;
-  position: absolute;
-  margin: 0px 55px 0px 0px;
-  z-index: 2;
-  top: 20px;
-  left: 20px;
+  flex-grow: 1;
+ 
 }
 .item-categories__content span {
   color: #B1B1B1;
   font-size: 20px;
   line-height: 1.4;
-  position: absolute;
-  z-index: 2;
-  right: 20px;
-  top: 20px;
 }
+
 .item-categories__link {
   position: absolute;
   bottom: 20px;
@@ -357,6 +371,7 @@ body{
   
 }
 .card__image img{
+  max-width: 100%;
   transition: 0.3s;
 }
 .card__image img:hover{
@@ -396,6 +411,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
 }
 .card__price {
   font-size: 20px;
@@ -429,7 +445,7 @@ body{
   opacity: 0.5;
 }
 .shares__box{
-  margin-bottom: 15px;
+  
 }
 .shares__items{
   display: flex;
