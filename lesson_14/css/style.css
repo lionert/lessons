@@ -141,7 +141,9 @@ body{
   padding: 10px 0px;
   transition: 0.3s;
   position: relative;
+
 }
+
 .midle-menu__window input{
   width: 421px;
   height: 50px;
@@ -149,6 +151,7 @@ body{
   padding: 0px 55px 0px 15px;
   transition: 0.3s;
 }
+
 .midle-menu__image{
   position: absolute;
   right: 3%;
@@ -254,10 +257,11 @@ body{
   max-width: 740px;
   margin: 0 auto;
   margin-bottom: 30px;
+  padding-top: 40px;
 }
 .orders__title{
   text-align: center;
-  padding: 40px 0px;
+  margin-bottom: 40px;
   font-size: 40px;
   line-height: 1.2;
 }
@@ -300,9 +304,14 @@ body{
 .section-form__input:hover {
   outline: 2px solid #ffbc57;
 }
+.section-form__input:focus-visible{
+  outline: 2px solid #ffbc57;
+}
 .section-form__checkbox{
-  
-
+  align-self: flex-start;
+}
+.section-form__checkbox span:focus-visible{
+  outline: 2px solid #ffbc57;
 }
 .checkbox{
   position: relative;
@@ -368,7 +377,7 @@ body{
   position: relative;
   outline: 1px solid #ffbc5700;
   transition: outline 0.1s;
-}
+}   
 .way__input {
   z-index: 5;
   cursor: pointer;
