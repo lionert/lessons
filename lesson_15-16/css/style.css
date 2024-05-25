@@ -93,6 +93,9 @@ body{
 }
 .social-top-header__item {
 }
+.social-top-header__item img{
+  width: 18px;
+}
 .social-top-header__link {
   border-radius: 50%;
 	width: 30px;
@@ -258,20 +261,16 @@ body{
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative;
 }
 .phone {
+  position: relative;
 }
-@media (any-hover:hover){
-  .phone:hover .phone__list{
-    top: 32%;
-    opacity: 1;
-    pointer-events: all;
-  }
-  .phone__link:hover {
-    text-decoration: underline;
-  }
+
+.phone__icon {
 }
 .phone__icon {
+  width: 50px;
 }
 @media (any-hover:hover){
   .phone__icon:hover{
@@ -297,13 +296,22 @@ body{
 .phone__list {
   pointer-events: none;
   position: absolute;
-  top: 20%;
   background-color: #FFF;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   padding: 10px;
   transition: all 0.3s;
   opacity: 0;
   border-radius: 8px;
+}
+@media (any-hover:hover){
+  .phone:hover .phone__list{
+    top: 100%;
+    opacity: 1;
+    pointer-events: all;
+  }
+  .phone__link:hover {
+    text-decoration: underline;
+  }
 }
 .phone__item:not(:last-child) {
   margin-bottom: 5px;
@@ -316,6 +324,9 @@ body{
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+}
+.midle-menu__saved img{
+  width: 50px;
 }
 .midle-menu__selected,
 .midle-menu__basket{
@@ -386,6 +397,7 @@ body{
   flex-wrap: wrap;
   column-gap: 40px;
   row-gap: 5px;
+  justify-content: flex-end;
 }
 .use-menu__item {
 }
@@ -563,6 +575,9 @@ body{
     flex-grow: 1;
   }
 
+  .bootom-menu{
+    display: none;
+  }
 }
 @media (max-width: 767.98px) {
 	.midle-menu__logo {
