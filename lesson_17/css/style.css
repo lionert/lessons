@@ -837,6 +837,7 @@ body{
   .popular-products--pading{
     padding-top: 150px;
 }
+ }
 @media (max-width: 389.98px){
   .popular-products--pading{
     padding-top: 200px;
