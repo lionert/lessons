@@ -705,6 +705,12 @@ body::-webkit-scrollbar-thumb {
   padding-top: 130px;
   padding-bottom: 120px;
 }
+.about__container {
+  overflow: hidden;
+  max-width: 1302px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .about__title {
   font-size: 60px;
   text-align: center;
@@ -747,27 +753,30 @@ body::-webkit-scrollbar-thumb {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 60px;
+  max-width: 992px;
+  margin-inline: auto;
+  line-height: 2.22;
 }
 @media (min-width: 83.25em) {
   .about__subtitle {
-    font-size: 3.75rem;
+    font-size: 1.125rem;
   }
 }
 @media (min-width: 20em) and (max-width: 83.25em) {
-  @supports (font-size: clamp( 1.5rem , 0.7885375494rem  +  3.557312253vw , 3.75rem )) {
+  @supports (font-size: clamp( 0.875rem , 0.7959486166rem  +  0.395256917vw , 1.125rem )) {
     .about__subtitle {
-      font-size: clamp( 1.5rem , 0.7885375494rem  +  3.557312253vw , 3.75rem );
+      font-size: clamp( 0.875rem , 0.7959486166rem  +  0.395256917vw , 1.125rem );
     }
   }
-  @supports not (font-size: clamp( 1.5rem , 0.7885375494rem  +  3.557312253vw , 3.75rem )) {
+  @supports not (font-size: clamp( 0.875rem , 0.7959486166rem  +  0.395256917vw , 1.125rem )) {
     .about__subtitle {
-      font-size: calc(1.5rem + 2.25 * (100vw - 20rem) / 63.25);
+      font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 63.25);
     }
   }
 }
 @media (max-width: 20em) {
   .about__subtitle {
-    font-size: 1.5rem;
+    font-size: 0.875rem;
   }
 }
 .nav-about {

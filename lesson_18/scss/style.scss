@@ -536,6 +536,10 @@ body{
 	// .about__container
 
 	&__container {
+		overflow: hidden;
+	max-width: 1302px;
+  padding-left: 15px;
+  padding-right: 15px;
 	}
 
 	// .about__title
@@ -563,7 +567,10 @@ body{
 		margin: 0 auto;
 		text-align: center;
 		margin-bottom: 60px;
-		@include adaptiveValue("font-size", 60, 24);
+		max-width: 992px;
+    margin-inline: auto;
+    line-height: 2.22;
+		@include adaptiveValue("font-size", 18, 14);
 	}
 
 	// .about__nav
