@@ -1,0 +1,92 @@
+@use "sass:math";
+
+/* Підключаємо  локальні шрифти*/
+@import "_fonts.scss";
+
+/* Підключаємо  css  файл скидання стилів*/
+@import "_reset.scss";
+//Міксини
+@import "_mixins";
+
+// Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1320;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// ==========================================================
+body {
+  font-family: "OpenSans", sans-serif;
+  font-weight: 600;
+  background-color: #ffffff;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+[class*="__container"] {
+  max-width: toRem(1290);
+  padding-left: toRem(15);
+  padding-right: toRem(15);
+  margin: 0 auto;
+}
+
+.wrapper {
+}
+.page {
+  padding-block: toRem(120);
+}
+.questions {
+  // .questions__container
+
+  &__container {
+  }
+
+  // .questions__item
+
+  &__item *:not(:last-child) {
+    margin-bottom: toRem(20);
+  }
+}
+.item-question {
+  // .item-question__task
+
+  &__task {
+  }
+
+  // .item-question__title
+
+  &__title {
+  }
+
+  // .item-question__list
+
+  &__list {
+    list-style: none;
+    counter-reset: JediCSS;
+  }
+
+  // .item-question__answer
+
+  &__answer {
+  }
+
+  // .item-question__answer--correct
+
+  &__answer--correct {
+    background-color: green;
+  }
+}
