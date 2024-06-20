@@ -115,7 +115,7 @@ textarea {
 body {
   font-family: "OpenSans", sans-serif;
   font-weight: 600;
-  background-color: #ffffff;
+  background-color: #0866ff;
 }
 
 .wrapper {
@@ -143,18 +143,34 @@ body {
   margin: 0 auto;
 }
 
-.page {
-  padding-block: 7.5rem;
+.page__container {
+  padding: 9.375rem 0;
 }
-
-.questions__item *:not(:last-child) {
+.page__container *:not(:last-child) {
   margin-bottom: 1.25rem;
 }
-
-.item-question__list {
-  list-style: none;
-  counter-reset: JediCSS;
+.title {
+  font-size: 2.25rem;
+  color: #fff;
+  text-align: center;
 }
-.item-question__answer--correct {
-  background-color: green;
+
+details {
+  background-color: azure;
+  border-radius: 1.25rem;
+  min-height: 9.375rem;
+}
+details summary:last-of-type {
+  padding: 1.25rem 1.25rem 0 1.25rem;
+  line-height: 1.5625rem;
+}
+details p:last-of-type {
+  padding: 0rem 0.625rem 1.25rem 2.5rem;
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+  color: rgb(43, 165, 43);
+}
+
+span {
+  font-size: 1.5rem;
 }

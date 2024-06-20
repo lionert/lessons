@@ -9,24 +9,113 @@
   <body>
     <div class="wrapper">
       <main class="page">
-        <div class="questions">
-          <div class="questions__container">
-            <div class="questions__item item-question">
-              <div class="item-question__task">Задача №1</div>
-              <div class="item-question__title">Яка назва змінної вірна?</div>
-              <ol class="item-question__list">
-                <li class="item-question__answer">let user-name</li>
-                <li class="item-question__answer">let UserName</li>
-                <li
-                  class="item-question__answer item-question__answer--correct">let
-                  UserName</li>
-              </ol>
-            </div>
+        <div class="page__container">
+          <h2 class="homework__title title">Урок № 22
+            "Основи JavaScript частина 2"
+          </h2>
+          <div class="page__homework homework">
+            <details open>
+              <summary><span>Задача №1
+                  Що потрапить в консоль?</span><br>
+                et someVar = 0;<br>
+                ++someVar;<br>
+
+                if (someVar) {<br>
+                console.log(someVar);<br>
+                }<br>
+              </summary>
+              <p>
+                Відповідь: 1, тому що iнкремент ++ збільшує число на 1.
+              </p>
+            </details>
+            <details>
+              <summary><span>Задача №2
+                  За допомогою циклу FOR виведіть в консоль 10
+                  рядків:</span><br>
+                Пункт №1<br>
+                Пункт №2<br>
+                і т.д.<br>
+              </summary>
+              <p>
+                Відповідь:<br>
+                let someString = "Пункт №";<br>
+                for (let i = 1; i <= 10; ++i) {<br>
+                console.log(someString + [i]);<br>
+                }<br>
+              </p>
+            </details>
+            <details>
+              <summary><span>Задача №3<br>
+                  Що потрапить в консоль ?<br>
+                  if (2 * 20 <= 10 || 30 / 2 < 5 && 10 <= "10" || 20 === "20") {
+                  console.log('000')};</span>
+              </summary>
+              <p>
+                Відповідь:<br>
+                1. 40 <= 10 || 30 / 2 < 5 && 10 <= "10" || 20 === "20"<br>
+
+                2. 40 <= 10 || 15 < 5 && 10 <= "10" || 20 === "20"<br>
+
+                3. 40 <= 10 || false && 10 <= "10" || 20 === "20"<br>
+
+                4. false || false && 10 <= "10" || 20 === "20"<br>
+
+                5. false || false && true || false<br>
+
+                6. false || false || false<br>
+
+                7. false || false<br>
+
+                8. false <br>
+                Інструкція if(...) обчислює умову в дужках і, якщо результат
+                умови true, виконує блок коду. Результат false.
+              </p>
+            </details>
+            <details>
+              <summary><span>Задача №4
+                  Створіть функцію, яка повертає результат ділення числа a на
+                  число b з додаванням рядка "Результат ділення: "
+                  Викличте функцію передаючі різні значення, у тому числі не
+                  передаючи зовсім.
+                  Функція не має повертати NaN, Infinite або помилку </span><br>
+              </summary>
+              <p>
+                function calcSum(a, b) {<br>
+                if (a / b === Infinity) {<br>
+                console.log(`На нуль ділити не можна`);<br>
+                } else if (typeof a !== "number" || typeof b !== "number") {<br>
+                console.log("Обидва значення мають бути числами");<br>
+                } else {<br>
+                console.log(`Результат ділення: ${a / b}`);<br>
+                }<br>
+                }<br>
+                calcSum(100, 2);<br>
+                calcSum(100, 0);<br>
+                calcSum("", "");<br>
+                calcSum();
+              </p>
+            </details>
+            <details open>
+              <summary><span>Задача №5 Створіть масив даних - 5 елементів, один
+                  з яких
+                  число 10
+                  Обробіть масив за допомогою методу перебору
+                  Перевіряйте елемент на відповідність числу 10, та у разі
+                  відповідності, виводьте в консоль</span>
+              </summary>
+              <p>
+                let someArray = [11, "Жека", true, "Привіт!", 10];<br>
+                someArray.forEach((item, index, array) => {<br>
+                if (item === 10) {<br>
+                console.log(`${item} має позицію ${index} в масиві
+                ${array}`);<br>
+                }<br>
+                });<br>
+              </p>
+            </details>
           </div>
         </div>
-
       </main>
-
     </div>
     <script src="js/script.js"></script>
     <script src="js/dynamic_adapt.js"></script>
