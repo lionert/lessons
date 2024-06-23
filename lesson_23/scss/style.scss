@@ -1,0 +1,100 @@
+@use "sass:math";
+
+/* Підключаємо  локальні шрифти*/
+@import "_fonts.scss";
+
+/* Підключаємо  css  файл скидання стилів*/
+@import "_reset.scss";
+//Міксини
+@import "_mixins";
+
+// Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1320;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// ==========================================================
+body {
+  font-family: "OpenSans", sans-serif;
+  font-weight: 600;
+  background-color: #0866ff;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+[class*="__container"] {
+  max-width: toRem(1290);
+  padding-left: toRem(15);
+  padding-right: toRem(15);
+  margin: 0 auto;
+}
+
+.page {
+  // .page__container
+
+  &__container {
+    padding: toRem(150) 0;
+    *:not(:last-child) {
+      margin-bottom: toRem(20);
+    }
+  }
+
+  // .page__homework
+
+  &__homework {
+  }
+}
+.homework {
+  // .homework__title
+
+  &__title {
+  }
+}
+.title {
+  font-size: toRem(36);
+  color: #fff;
+  text-align: center;
+}
+details {
+  background-color: azure;
+  border-radius: toRem(20);
+  min-height: toRem(150);
+  summary:last-of-type {
+    padding: toRem(20) toRem(20) 0 toRem(20);
+    line-height: toRem(25);
+  }
+  p:last-of-type {
+    padding: toRem(0) toRem(10) toRem(20) toRem(40);
+    font-size: toRem(20);
+    line-height: toRem(25);
+    color: rgb(43, 165, 43);
+  }
+}
+span {
+  font-size: toRem(24);
+}
+.button {
+  padding: 12px;
+  background-color: red;
+}
+p {
+  padding: toRem(0) toRem(10) toRem(20) toRem(40);
+  font-size: toRem(20);
+  line-height: toRem(25);
+  color: rgb(43, 165, 43);
+}
