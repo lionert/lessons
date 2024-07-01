@@ -523,6 +523,9 @@ body {
 .brand {
   margin-bottom: 5.625rem;
 }
+.brand__title {
+  display: none;
+}
 .brand__list {
   display: -webkit-box;
   display: -ms-flexbox;
