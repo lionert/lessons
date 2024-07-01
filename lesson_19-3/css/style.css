@@ -893,7 +893,7 @@ body {
 .image-products__submenu {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 13%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
