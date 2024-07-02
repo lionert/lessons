@@ -762,6 +762,16 @@ body {
   @media (max-width: toEm(645.98)) {
     justify-items: center;
   }
+  // .grid-products__submenu
+  &__submenu {
+    position: absolute;
+    bottom: 13%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: toRem(20);
+  }
 
   // .grid-products__item
 
@@ -833,7 +843,7 @@ body {
   &__submenu {
     position: absolute;
     left: 0;
-    bottom: 13%;
+    bottom: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -1022,7 +1032,8 @@ body {
   }
   // .cards-instagram__image
   &__item {
-    flex: 1 0 toRem(200);
+    align-self: center;
+    flex: 0 0 toRem(200);
   }
   //.cards-instagram__image
   &__link {
