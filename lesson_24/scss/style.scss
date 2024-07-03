@@ -1,0 +1,62 @@
+@use "sass:math";
+
+/* Підключаємо  локальні шрифти*/
+@import "_fonts.scss";
+
+/* Підключаємо  css  файл скидання стилів*/
+@import "_reset.scss";
+//Міксини
+@import "_mixins";
+
+// Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1320;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// ==========================================================
+body {
+  font-family: "OpenSans", sans-serif;
+  font-weight: 600;
+  opacity: 0;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+.list {
+}
+.item {
+  padding: 10px;
+  background-color: blue;
+  width: 300px;
+  color: #fff;
+  margin: 5px auto;
+}
+.active {
+  background-color: green;
+}
+.body-visible {
+  opacity: 1;
+}
+.header {
+  height: 200px;
+  background-color: red;
+}
+.footer {
+  height: 200px;
+  background-color: blue;
+}
